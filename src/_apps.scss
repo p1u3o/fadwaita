@@ -1,8 +1,5 @@
 @import "fadwaita";
 
-/* set $ambiance to null, unless already defined */
-$ambiance: null !default;
-
 /***********
  * Tweak Tool *
  ***********/
@@ -120,16 +117,8 @@ $ambiance: null !default;
     }
 
     .path-bar-box.width-maximized {
-      @if $ambiance {
-        $_bg: if($variant=='light', lighten($headerbar_bg_color, 3%),
-                                    lighten($headerbar_bg_color, 1%));
-        border: 1px solid if($ambiance, darken($headerbar_bg_color, 9%), $borders_color);
-        &:backdrop { border-color: if($ambiance, $headerbar_bg_color, $backdrop_borders_color);}
-        background-color: $_bg;
-      } @else {
         border: 1px solid $borders_color;
         background-color: $bg_color;
-      }
     }
 
     .path-bar-box.width-maximized button:first-child {
@@ -487,15 +476,6 @@ terminal-window {
   #MozillaGtkWidget.background  {
     // REMOVE THIS when firefox supports rounded menus
     menu, .menu,.context-menu { border-radius: 0; }
-
-    @if $ambiance {
-      menubar,
-      .menubar,
-      menubar > menuitem:hover {
-        background-color: $headerbar_bg_color;
-        color:$headerbar_fg_color;
-      }
-    }
 
     // Adapt scrollbars a bit more to the GTK Scrollbar styling
     scrollbar {
