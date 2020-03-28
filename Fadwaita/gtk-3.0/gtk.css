@@ -2047,7 +2047,6 @@ popover.emoji-completion contents row box { padding: 2px 10px; }
 
 popover.emoji-completion .emoji:hover { background: rgba(61, 61, 61, 0.15); }
 
-/* set $ambiance to null, unless already defined */
 /*********** Tweak Tool * */
 list.tweak-categories separator { background: transparent; }
 
